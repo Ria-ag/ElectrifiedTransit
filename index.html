@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future in Motion | Electrified Transit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+        <div class="hero-content">
+        <h1>Future in Motion</h1>
+        <p>A cleaner way to travel through electrified transit.</p>
+    </div>
+</section>
+
+<section class="story">
+    <div class="bubble bubble-left">
+        <h2>The Way We Move</h2>
+        <p>
+        Every day students depend on buses to connect school, work, and home.  
+        But not every ride is clean.
+        </p>
+    </div>
+    <img src="assets/photo1.jpg" class="story-img">
+</section>
+
+<section class="story dark">
+    <img src="assets/photo2.jpg" class="story-img">
+    <div class="bubble bubble-right">
+        <h2>Electric Transit</h2>
+        <p>
+        Electric buses reduce emissions, lower noise pollution, and reshape how cities experience public transportation.
+        </p>
+    </div>
+</section>
+
+<section class="numbers">
+    <h2>The Numbers Speak</h2>
+    <div class="numbers-grid">
+        <div class="stat">
+            <h3 class="counter" data-target="5">0</h3>
+            <p>Link Lines by 2041</p>
+        </div>
+        <div class="stat">
+            <h3 class="counter" data-target="3">0</h3>
+            <p>Electric Stride BRT</p>
+        </div>
+        <div class="stat">
+            <h3 class="counter" data-target="70">0</h3>
+            <p>Trolleybus Routes</p>
+        </div>
+        <div class="stat">
+            <h3 class="counter" data-target="2041">0</h3>
+            <p>Target Year</p>
+        </div>
+    </div>
+</section>
+
+<section class="story">
+    <div class="bubble bubble-left">
+        <h2>Why It Matters</h2>
+        <p>
+        Expanding electrified routes improves air quality, accessibility, and sustainability for future generations.
+        </p>
+    </div>
+</section>
+
+<button id="playAudio" class="audio-float">Hear the City</button>
+<audio id="voiceover" src="assets/voiceover.mp3"></audio>
+
+<section class="cta">
+    <h2>Ride the Future</h2>
+    <p>Support the expansion of electrified transit.</p>
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to Top</button>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
