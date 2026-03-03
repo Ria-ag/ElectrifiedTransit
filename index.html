@@ -9,11 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- AUDIO -->
-<audio id="voiceover" src="assets/MP2_VO.m4a"></audio>
-
-<!-- AUDIO BUTTON -->
+<audio id="voiceover" src="assets/vo.m4a"></audio>
 <button class="audio-pill" id="playAudio" aria-label="Play audio">
   <span class="audio-icon">
     <span></span><span></span><span></span>
@@ -21,40 +17,31 @@
   <span class="audio-label">Hear the City</span>
 </button>
 
-<!-- PROGRESS BAR -->
 <div class="progress-bar" id="progressBar"></div>
 
-<!-- ═══════════════════════════════════
-     SECTION 1 — HERO
-═══════════════════════════════════ -->
 <section class="hero" id="hero">
   <video autoplay muted loop playsinline class="hero-video">
-    <source src="assets/video.mp4" type="video/mp4">
+    <source src="assets/video.mov" type="video/mov">
   </video>
   <div class="hero-grain"></div>
   <div class="hero-overlay"></div>
-
   <div class="hero-content">
     <p class="hero-eyebrow mono">King County, Washington</p>
     <h1 class="hero-title">
       <span class="line">Future</span>
       <span class="line italic">in Motion</span>
     </h1>
-    <p class="hero-sub">A case for electrified transit — cleaner, quieter, and overdue.</p>
+    <p class="hero-sub">A case for electrified transit.</p>
     <div class="hero-scroll-hint">
       <div class="scroll-line"></div>
       <span class="mono">Scroll</span>
     </div>
   </div>
-
   <div class="hero-badge">
     <span class="mono">01 / 06</span>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════
-     SECTION 2 — CHAPTER: THE WIRE
-═══════════════════════════════════ -->
 <section class="chapter" id="chapter-wire">
   <div class="chapter-label">
     <span class="mono">02 / 06</span>
@@ -77,12 +64,10 @@
     </div>
 
     <div class="chapter-photo-stack reveal-right">
-      <!-- Photo: overhead wire intersection (IMG_0066) -->
       <div class="photo-frame frame-main">
         <img src="assets/IMG_0066.jpg" alt="Trolleybus overhead wire infrastructure">
         <div class="photo-caption mono">Overhead catenary intersection — University District</div>
       </div>
-      <!-- Photo: bus only lane detail (IMG_0358) -->
       <div class="photo-frame frame-accent">
         <img src="assets/IMG_0358.jpg" alt="Bus only lane pavement marking">
         <div class="photo-caption mono">Bus-only corridor designation</div>
@@ -91,11 +76,7 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════
-     SECTION 3 — FULLBLEED: ROUTE 44
-═══════════════════════════════════ -->
 <section class="fullbleed-photo" id="chapter-route">
-  <!-- Photo: Route 44 trolleybus head-on (IMG_0394) -->
   <div class="fullbleed-img parallax-bg" style="background-image: url('assets/IMG_0394.jpg')"></div>
   <div class="fullbleed-overlay"></div>
   <div class="fullbleed-text">
@@ -107,9 +88,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════
-     SECTION 4 — PHOTO STRIP (HORIZONTAL)
-═══════════════════════════════════ -->
 <section class="strip-section" id="chapter-fleet">
   <div class="strip-header reveal">
     <span class="mono">04 / 06 — The Fleet</span>
@@ -121,19 +99,16 @@
     <div class="strip-track" id="stripTrack">
 
       <div class="strip-card">
-        <!-- IMG_0372: Route 44 from behind on road -->
         <img src="assets/IMG_0372.jpg" alt="Route 44 trolleybus from behind">
         <div class="strip-card-label mono">Route 44 — UW Med Ctr</div>
       </div>
 
       <div class="strip-card">
-        <!-- IMG_0380: Route 44 side view descending hill -->
         <img src="assets/IMG_0380.jpg" alt="Trolleybus navigating Seattle hill">
         <div class="strip-card-label mono">Arterial descent — Capitol Hill</div>
       </div>
 
       <div class="strip-card">
-        <!-- IMG_0397: Route 44 from above in bus lane -->
         <img src="assets/IMG_0397.jpg" alt="Trolleybus in bus-only lane from above">
         <div class="strip-card-label mono">Bus-priority corridor</div>
       </div>
@@ -146,13 +121,11 @@
       </div>
 
       <div class="strip-card">
-        <!-- IMG_0414: Hybrid-Electric bus side detail -->
         <img src="assets/IMG_0414.jpg" alt="Hybrid-Electric King County Metro bus">
         <div class="strip-card-label mono">Hybrid-Electric Metro Bus #7418</div>
       </div>
 
       <div class="strip-card">
-        <!-- IMG_0426: Sound Transit + Metro at transit hub -->
         <img src="assets/IMG_0426.jpg" alt="Sound Transit and Metro buses at hub">
         <div class="strip-card-label mono">Sound Transit / Metro interchange</div>
       </div>
@@ -162,9 +135,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════
-     SECTION 5 — NUMBERS
-═══════════════════════════════════ -->
 <section class="numbers-section" id="chapter-numbers">
   <div class="numbers-bg-photo parallax-bg" style="background-image: url('assets/IMG_0355.jpg')"></div>
   <div class="numbers-scrim"></div>
@@ -200,9 +170,6 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════
-     SECTION 6 — VIDEO
-═══════════════════════════════════ -->
 <section class="video-section" id="chapter-video">
   <div class="video-chapter-label mono reveal">06 / 06 — The Story</div>
 
@@ -220,8 +187,8 @@
     <div class="video-player-wrap reveal-right">
       <div class="video-player">
         <video controls poster="assets/IMG_0394.jpg" class="embed-video">
-          <source src="assets/MP2_video.mov" type="video/quicktime">
-          <source src="assets/MP2_video.mp4" type="video/mp4">
+          <source src="assets/video.mov" type="video/quicktime">
+          <source src="assets/video.mov" type="video/mov">
         </video>
         <div class="video-border-accent"></div>
       </div>
@@ -230,13 +197,9 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════
-     SECTION 7 — CTA / FOOTER
-═══════════════════════════════════ -->
 <section class="cta-section">
   <div class="cta-grid">
     <div class="cta-photo">
-      <!-- IMG_0355: bus stop shelter -->
       <img src="assets/IMG_0355.jpg" alt="King County bus stop shelter">
     </div>
     <div class="cta-text">
