@@ -50,17 +50,6 @@ body {
   margin-bottom: 1.2rem;
 }
 
-/* ── PROGRESS BAR ── */
-.progress-bar {
-  position: fixed;
-  top: 0; left: 0;
-  height: 2px;
-  width: 0%;
-  background: var(--gold);
-  z-index: 9999;
-  transition: width 0.1s linear;
-}
-
 /* ── AUDIO PILL ── */
 .audio-pill {
   position: fixed;

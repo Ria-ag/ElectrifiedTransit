@@ -1,12 +1,3 @@
-// ── SCROLL PROGRESS BAR ──
-const progressBar = document.getElementById('progressBar');
-window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
-  const total = document.documentElement.scrollHeight - window.innerHeight;
-  progressBar.style.width = `${(scrolled / total) * 100}%`;
-}, { passive: true });
-
-
 // ── REVEAL ON SCROLL ──
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
