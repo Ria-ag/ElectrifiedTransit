@@ -1,88 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future in Motion | Electrified Transit</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future in Motion — King County Electrified Transit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<section class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-        <source src="assets/video.mp4" type="video/mp4">
-    </video>
-    <div class="overlay"></div>
-        <div class="hero-content">
-        <h1>Future in Motion</h1>
-        <p>A cleaner way to travel through electrified transit.</p>
+<!-- AUDIO -->
+<audio id="voiceover" src="assets/MP2_VO.m4a"></audio>
+
+<!-- AUDIO BUTTON -->
+<button class="audio-pill" id="playAudio" aria-label="Play audio">
+  <span class="audio-icon">
+    <span></span><span></span><span></span>
+  </span>
+  <span class="audio-label">Hear the City</span>
+</button>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 1 — HERO
+═══════════════════════════════════ -->
+<section class="hero" id="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="assets/video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-grain"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow mono">King County, Washington</p>
+    <h1 class="hero-title">
+      <span class="line">Future</span>
+      <span class="line italic">in Motion</span>
+    </h1>
+    <p class="hero-sub">A case for electrified transit — cleaner, quieter, and overdue.</p>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span class="mono">Scroll</span>
     </div>
+  </div>
+
+  <div class="hero-badge">
+    <span class="mono">01 / 06</span>
+  </div>
 </section>
 
-<section class="story">
-    <div class="bubble bubble-left">
-        <h2>The Way We Move</h2>
-        <p>
-        Every day students depend on buses to connect school, work, and home.  
-        But not every ride is clean.
-        </p>
+<!-- ═══════════════════════════════════
+     SECTION 2 — CHAPTER: THE WIRE
+═══════════════════════════════════ -->
+<section class="chapter" id="chapter-wire">
+  <div class="chapter-label">
+    <span class="mono">02 / 06</span>
+    <span class="chapter-line"></span>
+    <span class="mono">The Infrastructure</span>
+  </div>
+
+  <div class="chapter-split">
+    <div class="chapter-text reveal">
+      <h2 class="section-title">A city already wired.</h2>
+      <p class="body-text">
+        Seattle's trolleybus network has hummed above its streets for decades — an invisible architecture of copper wire and overhead catenary that most riders never look up to see.
+      </p>
+      <p class="body-text">
+        The infrastructure exists. The question is whether the will to expand it does too.
+      </p>
+      <div class="pull-quote">
+        "Every trolleybus is a diesel bus<br>that was never built."
+      </div>
     </div>
-    <img src="assets/photo1.jpg" class="story-img">
+
+    <div class="chapter-photo-stack reveal-right">
+      <!-- Photo: overhead wire intersection (IMG_0066) -->
+      <div class="photo-frame frame-main">
+        <img src="assets/IMG_0066.jpg" alt="Trolleybus overhead wire infrastructure">
+        <div class="photo-caption mono">Overhead catenary intersection — University District</div>
+      </div>
+      <!-- Photo: bus only lane detail (IMG_0358) -->
+      <div class="photo-frame frame-accent">
+        <img src="assets/IMG_0358.jpg" alt="Bus only lane pavement marking">
+        <div class="photo-caption mono">Bus-only corridor designation</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="story dark">
-    <img src="assets/photo2.jpg" class="story-img">
-    <div class="bubble bubble-right">
-        <h2>Electric Transit</h2>
-        <p>
-        Electric buses reduce emissions, lower noise pollution, and reshape how cities experience public transportation.
-        </p>
-    </div>
+<!-- ═══════════════════════════════════
+     SECTION 3 — FULLBLEED: ROUTE 44
+═══════════════════════════════════ -->
+<section class="fullbleed-photo" id="chapter-route">
+  <!-- Photo: Route 44 trolleybus head-on (IMG_0394) -->
+  <div class="fullbleed-img parallax-bg" style="background-image: url('assets/IMG_0394.jpg')"></div>
+  <div class="fullbleed-overlay"></div>
+  <div class="fullbleed-text">
+    <p class="mono fullbleed-chapter">03 / 06 — The Trolleybus</p>
+    <h2 class="fullbleed-title">Route 44.<br><em>Electrified since 1940.</em></h2>
+    <p class="fullbleed-body">
+      King County Metro's trolleybus fleet serves some of Seattle's densest corridors — running clean, running quiet — a preview of what the entire system could be.
+    </p>
+  </div>
 </section>
 
-<section class="numbers">
-    <h2>The Numbers Speak</h2>
-    <div class="numbers-grid">
-        <div class="stat">
-            <h3 class="counter" data-target="5">0</h3>
-            <p>Link Lines by 2041</p>
+<!-- ═══════════════════════════════════
+     SECTION 4 — PHOTO STRIP (HORIZONTAL)
+═══════════════════════════════════ -->
+<section class="strip-section" id="chapter-fleet">
+  <div class="strip-header reveal">
+    <span class="mono">04 / 06 — The Fleet</span>
+    <h2 class="section-title">Every vehicle, a choice.</h2>
+    <p class="body-text">King County Metro's vehicles range from decades-old diesel to cutting-edge electric. The difference isn't only environmental — it's sensory.</p>
+  </div>
+
+  <div class="strip-scroll-wrapper">
+    <div class="strip-track" id="stripTrack">
+
+      <div class="strip-card">
+        <!-- IMG_0372: Route 44 from behind on road -->
+        <img src="assets/IMG_0372.jpg" alt="Route 44 trolleybus from behind">
+        <div class="strip-card-label mono">Route 44 — UW Med Ctr</div>
+      </div>
+
+      <div class="strip-card">
+        <!-- IMG_0380: Route 44 side view descending hill -->
+        <img src="assets/IMG_0380.jpg" alt="Trolleybus navigating Seattle hill">
+        <div class="strip-card-label mono">Arterial descent — Capitol Hill</div>
+      </div>
+
+      <div class="strip-card">
+        <!-- IMG_0397: Route 44 from above in bus lane -->
+        <img src="assets/IMG_0397.jpg" alt="Trolleybus in bus-only lane from above">
+        <div class="strip-card-label mono">Bus-priority corridor</div>
+      </div>
+
+      <div class="strip-card strip-card-text">
+        <div class="strip-card-inner">
+          <h3>Zero tailpipe emissions.<br>Same familiar route.</h3>
+          <p class="mono">Every mile on wire is a mile without exhaust.</p>
         </div>
-        <div class="stat">
-            <h3 class="counter" data-target="3">0</h3>
-            <p>Electric Stride BRT</p>
-        </div>
-        <div class="stat">
-            <h3 class="counter" data-target="70">0</h3>
-            <p>Trolleybus Routes</p>
-        </div>
-        <div class="stat">
-            <h3 class="counter" data-target="2041">0</h3>
-            <p>Target Year</p>
-        </div>
+      </div>
+
+      <div class="strip-card">
+        <!-- IMG_0414: Hybrid-Electric bus side detail -->
+        <img src="assets/IMG_0414.jpg" alt="Hybrid-Electric King County Metro bus">
+        <div class="strip-card-label mono">Hybrid-Electric Metro Bus #7418</div>
+      </div>
+
+      <div class="strip-card">
+        <!-- IMG_0426: Sound Transit + Metro at transit hub -->
+        <img src="assets/IMG_0426.jpg" alt="Sound Transit and Metro buses at hub">
+        <div class="strip-card-label mono">Sound Transit / Metro interchange</div>
+      </div>
+
     </div>
+    <div class="strip-drag-hint mono">← Drag to explore →</div>
+  </div>
 </section>
 
-<section class="story">
-    <div class="bubble bubble-left">
-        <h2>Why It Matters</h2>
-        <p>
-        Expanding electrified routes improves air quality, accessibility, and sustainability for future generations.
-        </p>
+<!-- ═══════════════════════════════════
+     SECTION 5 — NUMBERS
+═══════════════════════════════════ -->
+<section class="numbers-section" id="chapter-numbers">
+  <div class="numbers-bg-photo parallax-bg" style="background-image: url('assets/IMG_0355.jpg')"></div>
+  <div class="numbers-scrim"></div>
+
+  <div class="numbers-content">
+    <div class="numbers-header reveal">
+      <span class="mono">05 / 06 — The Numbers</span>
+      <h2 class="section-title light">What's already planned. What's still possible.</h2>
     </div>
+
+    <div class="stats-grid">
+      <div class="stat-block reveal">
+        <div class="stat-num mono" data-target="5">0</div>
+        <div class="stat-unit mono">lines</div>
+        <p class="stat-desc">Link Light Rail corridors fully electrified by 2041</p>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-num mono" data-target="3">0</div>
+        <div class="stat-unit mono">routes</div>
+        <p class="stat-desc">Electric Stride BRT rapid bus lines planned</p>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-num mono" data-target="14">0</div>
+        <div class="stat-unit mono">routes</div>
+        <p class="stat-desc">Existing trolleybus routes operating on overhead wire today</p>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat-num mono" data-target="2041">0</div>
+        <div class="stat-unit mono">goal</div>
+        <p class="stat-desc">Sound Transit's target year for network expansion completion</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<button id="playAudio" class="audio-float">Hear the City</button>
-<audio id="voiceover" src="assets/voiceover.mp3"></audio>
+<!-- ═══════════════════════════════════
+     SECTION 6 — VIDEO
+═══════════════════════════════════ -->
+<section class="video-section" id="chapter-video">
+  <div class="video-chapter-label mono reveal">06 / 06 — The Story</div>
 
-<section class="cta">
-    <h2>Ride the Future</h2>
-    <p>Support the expansion of electrified transit.</p>
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to Top</button>
+  <div class="video-layout">
+    <div class="video-text reveal">
+      <h2 class="section-title">A student's commute.<br><em>Through a cleaner lens.</em></h2>
+      <p class="body-text">
+        What does electrified transit feel like from the inside? Students at the University of Washington depend on these routes daily — for class, for work, for everything in between.
+      </p>
+      <p class="body-text">
+        This film follows that ride — Husky card taps, bus arrival times, and the everyday choice to travel without a car.
+      </p>
+    </div>
+
+    <div class="video-player-wrap reveal-right">
+      <div class="video-player">
+        <video controls poster="assets/IMG_0394.jpg" class="embed-video">
+          <source src="assets/MP2_video.mov" type="video/quicktime">
+          <source src="assets/MP2_video.mp4" type="video/mp4">
+        </video>
+        <div class="video-border-accent"></div>
+      </div>
+      <p class="mono video-credit">Directed by Lola — King County Transit Project, 2025</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SECTION 7 — CTA / FOOTER
+═══════════════════════════════════ -->
+<section class="cta-section">
+  <div class="cta-grid">
+    <div class="cta-photo">
+      <!-- IMG_0355: bus stop shelter -->
+      <img src="assets/IMG_0355.jpg" alt="King County bus stop shelter">
+    </div>
+    <div class="cta-text">
+      <h2 class="cta-title">The route<br>is already there.</h2>
+      <p class="body-text">
+        King County's electric transit network is real, rideable, and ready to grow. 
+        Every trip on a trolleybus or Link train is a vote for the infrastructure we want to see more of.
+      </p>
+      <div class="cta-links">
+        <a href="https://kingcounty.gov/metro" target="_blank" class="cta-btn">King County Metro</a>
+        <a href="https://www.soundtransit.org" target="_blank" class="cta-btn cta-btn-outline">Sound Transit</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <span class="footer-title">Future in Motion</span>
+      <span class="mono footer-meta">CMS 270 · University of Washington · 2025</span>
+    </div>
+    <div class="footer-team mono">
+      Cadence · Ria · Lola · Kai
+    </div>
+  </footer>
 </section>
 
 <script src="script.js"></script>
-
 </body>
 </html>
