@@ -1,8 +1,3 @@
-/* ══════════════════════════════════════════
-   FUTURE IN MOTION — King County Transit
-   Style Sheet
-══════════════════════════════════════════ */
-
 /* ── RESET & BASE ── */
 *, *::before, *::after {
   margin: 0; padding: 0;
@@ -119,9 +114,7 @@ body {
 
 .audio-pill.paused .audio-icon span { animation-play-state: paused; }
 
-/* ══════════════════════════
-   HERO
-══════════════════════════ */
+/* ── HERO ── */
 .hero {
   position: relative;
   height: 100svh;
@@ -240,9 +233,7 @@ body {
   to { opacity: 1; }
 }
 
-/* ══════════════════════════
-   CHAPTER: WIRE
-══════════════════════════ */
+/* ── WIRE ── */
 .chapter {
   padding: 12vh 6vw;
   position: relative;
@@ -326,9 +317,7 @@ body {
   border-radius: 2px;
 }
 
-/* ══════════════════════════
-   FULLBLEED PHOTO SECTION
-══════════════════════════ */
+/* ── PHOTO SECTION ── */
 .fullbleed-photo {
   position: relative;
   height: 90vh;
@@ -396,9 +385,7 @@ body {
   line-height: 1.75;
 }
 
-/* ══════════════════════════
-   STRIP SECTION
-══════════════════════════ */
+/* ── STRIP ── */
 .strip-section {
   padding: 10vh 0;
   background: var(--dark-2);
@@ -484,9 +471,7 @@ body {
   font-size: 0.65rem;
 }
 
-/* ══════════════════════════
-   NUMBERS SECTION
-══════════════════════════ */
+/* ── NUMBERS SECTION ── */
 .numbers-section {
   position: relative;
   padding: 14vh 6vw;
@@ -550,9 +535,7 @@ body {
   line-height: 1.6;
 }
 
-/* ══════════════════════════
-   VIDEO SECTION
-══════════════════════════ */
+/* ── VIDEO SECTION ── */
 .video-section {
   padding: 12vh 6vw;
   background: var(--dark-3);
@@ -602,9 +585,7 @@ body {
   font-size: 0.65rem;
 }
 
-/* ══════════════════════════
-   CTA
-══════════════════════════ */
+/* ── END ── */
 .cta-section {
   background: var(--dark);
 }
@@ -697,9 +678,7 @@ body {
   letter-spacing: 0.2em;
 }
 
-/* ══════════════════════════
-   REVEAL ANIMATIONS
-══════════════════════════ */
+/* ── ANIMATIONS ── */
 .reveal, .reveal-right {
   opacity: 0;
   transform: translateY(50px);
@@ -718,9 +697,7 @@ body {
 .stats-grid .stat-block:nth-child(3) { transition-delay: 0.3s; }
 .stats-grid .stat-block:nth-child(4) { transition-delay: 0.4s; }
 
-/* ══════════════════════════
-   RESPONSIVE
-══════════════════════════ */
+/* ── RESPONSIVENESS ── */
 @media (max-width: 900px) {
   .chapter-split,
   .video-layout { grid-template-columns: 1fr; }

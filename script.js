@@ -1,7 +1,3 @@
-/* ══════════════════════════════════════
-   FUTURE IN MOTION — script.js
-══════════════════════════════════════ */
-
 // ── SCROLL PROGRESS BAR ──
 const progressBar = document.getElementById('progressBar');
 window.addEventListener('scroll', () => {
