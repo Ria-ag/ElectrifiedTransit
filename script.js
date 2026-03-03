@@ -1,9 +1,7 @@
 // ── REVEAL ON SCROLL ──
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
@@ -20,7 +18,6 @@ function animateCount(el) {
 
   function step(now) {
     const progress = Math.min((now - start) / duration, 1);
-    // Ease-out cubic
     const eased = 1 - Math.pow(1 - progress, 3);
     el.textContent = Math.floor(eased * target).toLocaleString();
     if (progress < 1) requestAnimationFrame(step);
@@ -72,9 +69,7 @@ audioEl.addEventListener('ended', () => {
 // ── HORIZONTAL STRIP DRAG-TO-SCROLL ──
 const strip = document.getElementById('stripTrack');
 if (strip) {
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+  let isDown = false, startX, scrollLeft;
 
   strip.addEventListener('mousedown', (e) => {
     isDown = true;
@@ -82,50 +77,31 @@ if (strip) {
     startX = e.pageX - strip.offsetLeft;
     scrollLeft = strip.scrollLeft;
   });
-
-  strip.addEventListener('mouseleave', () => {
-    isDown = false;
-    strip.classList.remove('dragging');
-  });
-
-  strip.addEventListener('mouseup', () => {
-    isDown = false;
-    strip.classList.remove('dragging');
-  });
-
+  strip.addEventListener('mouseleave', () => { isDown = false; strip.classList.remove('dragging'); });
+  strip.addEventListener('mouseup',    () => { isDown = false; strip.classList.remove('dragging'); });
   strip.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
-    const x = e.pageX - strip.offsetLeft;
-    const walk = (x - startX) * 1.8;
-    strip.scrollLeft = scrollLeft - walk;
+    strip.scrollLeft = scrollLeft - (e.pageX - strip.offsetLeft - startX) * 1.8;
   });
 
-  // Touch support
-  let touchStartX = 0;
-  let touchScrollLeft = 0;
-
+  let touchStartX = 0, touchScrollLeft = 0;
   strip.addEventListener('touchstart', (e) => {
     touchStartX = e.touches[0].pageX;
     touchScrollLeft = strip.scrollLeft;
   }, { passive: true });
-
   strip.addEventListener('touchmove', (e) => {
-    const walk = (e.touches[0].pageX - touchStartX) * 1.5;
-    strip.scrollLeft = touchScrollLeft - walk;
+    strip.scrollLeft = touchScrollLeft - (e.touches[0].pageX - touchStartX) * 1.5;
   }, { passive: true });
 }
 
 
-// ── SMOOTH PARALLAX (desktop only) ──
+// ── PARALLAX (desktop only) ──
 function parallaxScroll() {
   if (window.innerWidth < 900) return;
-  const scrollY = window.scrollY;
   document.querySelectorAll('.parallax-bg').forEach(el => {
-    const rect = el.parentElement.getBoundingClientRect();
-    const offset = rect.top * 0.25;
+    const offset = el.parentElement.getBoundingClientRect().top * 0.25;
     el.style.transform = `translateY(${offset}px)`;
   });
 }
-
 window.addEventListener('scroll', parallaxScroll, { passive: true });
